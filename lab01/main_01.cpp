@@ -2,8 +2,20 @@
 
 #include "functions.h"
 using namespace std;
-int main() {
-    for (int i = 0; i <= 127; ++i) {
+int main (int argc, char *argv[]){
+    string arg=argv[1];
+    //cout<<argv[1]<<endl;
+    string allArgs;
+    for (int i = 1; i < argc; ++i) {
+        allArgs += argv[i];
+        if (i < argc - 1) allArgs += " ";
+    }
+
+    float osszeg = sumwords(allArgs);
+    cout << "Szamok osszege: " << osszeg << endl;
+
+
+    /*for (int i = 0; i <= 127; ++i) {
         cout<<i<<": "<<countbits(i)<<endl;
 
     }
@@ -26,6 +38,6 @@ int main() {
     cout<<"Szavak: "<<countWords(mondat)<<endl;
     cout<<"Szavak osszege: "<<sumwords(mondat2)<<endl;
     cout<<"Kodolt: "<<code(mondat3)<<endl;
-    cout<<"Nagybetus: "<<capitalize(mondat)<<endl;
+    cout<<"Nagybetus: "<<capitalize(mondat)<<endl;*/
     return 0;
 }

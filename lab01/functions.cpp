@@ -83,9 +83,9 @@ int countWords(std::string text) {
     }
     return nr;
 }
-int sumwords(std::string text) {
-    int nr=0;
-    int sum=0;
+float sumwords(std::string text) {
+    float nr=0;
+    float sum=0;
     std::stringstream ss(text);
     std::string words;
     while (ss >> words) {

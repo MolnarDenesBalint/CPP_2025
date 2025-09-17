@@ -14,7 +14,7 @@ double stddev(double array[], int numElements);
 int cmp(const void * p, const void * arg);
 std::pair<double, double> max2(double array[], int numElements);
 int countWords(std::string text);
-int sumwords(std::string text);
+float sumwords(std::string text);
 string code(string text);
 string capitalize(string text);
 void readfile(string filename);
