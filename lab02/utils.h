@@ -5,6 +5,7 @@
 #ifndef LAB2_UTILS_H
 #define LAB2_UTILS_H
 #include <utility>
+#include <vector>
 
 #include "points.h"
 double distance(const Point& a, const Point& b);
@@ -18,4 +19,6 @@ std::pair<Point, Point> closestPoints(Point* points, int numPoints);
 
 std::pair<Point, Point> farthestPoints(Point* points, int numPoints);
 void sortPoints(Point* points, int numPoints);
+Point* farthestPoints1(Point* points, int numPoints);
+void deletePoints(Point* points);
 #endif //LAB2_UTILS_H

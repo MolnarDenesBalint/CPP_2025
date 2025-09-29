@@ -110,4 +110,42 @@ pair<Point, Point> farthestPoints(Point* points, int numPoints) {
 void sortPoints(Point* points, int numPoints) {
     sort(points,points+numPoints, [](const Point &a,const Point &b){return b.getX()>a.getX();});
 }
+Point* farthestPoints1(Point* points, int numPoints) {
+    if (numPoints == 0) return nullptr;
+
+    Point* max = new Point[10];   // array to store top 10 farthest points
+    double* dists = new double[10]; // parallel array to store their distances
+    int count = 0;
+
+    for (int i = 0; i < numPoints; ++i) {
+        double dist = distance(points[i], Point(0, 0));
+
+        if (count < 10) {
+            max[count] = points[i];
+            dists[count] = dist;
+            ++count;
+        } else {
+            // Find the point in max[] with the smallest distance
+            int minIndex = 0;
+            for (int j = 1; j < 10; ++j) {
+                if (dists[j] < dists[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            // Replace if current point is farther
+            if (dist > dists[minIndex]) {
+                max[minIndex] = points[i];
+                dists[minIndex] = dist;
+            }
+        }
+    }
+
+    delete[] dists; // clean up distance array
+    return max;     // caller must delete[] this when done
+}
+void deletePoints(Point* points) {
+    delete(points);
+}
+
 

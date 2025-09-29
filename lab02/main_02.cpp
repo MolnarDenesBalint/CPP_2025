@@ -35,5 +35,12 @@ int main() {
     cout<<"After sort: "<<endl;
     sortPoints(array, 100);
     printArray(array, 100);
+    Point* maxi =farthestPoints1(array, 100);
+    cout<<"farthest points from origo:"<<endl<<endl;
+    for (int i=0; i<10; i++) {
+        maxi[i].print();
+
+    }
+    deletePoints(array);
     return 0;
 }
