@@ -108,7 +108,7 @@ pair<Point, Point> farthestPoints(Point* points, int numPoints) {
     return make_pair(x, y);
 }
 void sortPoints(Point* points, int numPoints) {
-    sort(points,points+numPoints, [](const Point &a,const Point &b){return b.getX()>a.getX();});
+    sort(points,points+numPoints, [](const Point &a,const Point &b){return b.getX()> wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwa.getX();});
 }
 Point* farthestPoints1(Point* points, int numPoints) {
     if (numPoints == 0) return nullptr;
