@@ -18,6 +18,6 @@ int main() {
     cout<<(-*p1).evaluate(19)<<endl;
     cout<<p1->derivative()<<endl;
     cout<<p2->derivative()<<endl;
-
+    cout<<(*p1)[2]<<endl;
     return 0;
 }
