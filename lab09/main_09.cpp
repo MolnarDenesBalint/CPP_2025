@@ -1,6 +1,12 @@
 #include <iostream>
+#include "Directory.h"
 
 int main() {
-    std::cout << "Hello, Lab_09" << std::endl;
+    Directory root("root");
+
+    Directory document("document");
+    root+=document;
+    root.display(2);
+
     return 0;
 }
