@@ -4,4 +4,6 @@ add_executable(lab11 main_11.cpp
         Settlement.h
         SettlementStatistics.h
         SettlementStatisticsImpl.cpp
-        SettlementStatisticsImpl.h)
+        SettlementStatisticsImpl.h
+        ../lab10/Student.cpp
+        ../lab10/Student.h)
