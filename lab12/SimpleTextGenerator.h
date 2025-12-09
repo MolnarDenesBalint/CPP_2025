@@ -11,6 +11,7 @@
 
 class SimpleTextGenerator: public TextGenerator {
     map<string, vector<string>> data;
+
 public:
     virtual void trainFromText(string trainingText) override;
     virtual void trainFromFile(string filename) override;
